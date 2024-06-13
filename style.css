@@ -37,6 +37,14 @@ nav .buttons a {
   text-decoration: none;
   font-size: 1.2rem;
 }
+@media screen and (max-width: 811px) {
+  nav .buttons {
+    display: none;
+  }
+  nav button.button {
+    display: none;
+  }
+}
 
 section#main {
   display: flex;
@@ -170,6 +178,9 @@ section#main .infographics .top .text-blocks .dot {
   color: white;
   transform: translate(-50%, -50%);
 }
+section#main .infographics .top .text-blocks .dot.mobile {
+  display: none;
+}
 section#main .infographics .top .image1 {
   width: 50%;
   flex-shrink: 1;
@@ -192,6 +203,56 @@ section#main .infographics .image2 {
 }
 section#main .infographics .block > * {
   text-align: center;
+}
+@media screen and (max-width: 1199px) {
+  section#main {
+    flex-direction: column;
+    align-items: center;
+  }
+  section#main .intro {
+    width: 100%;
+    align-items: center;
+  }
+  section#main .intro > * {
+    text-align: center;
+  }
+  section#main .intro .subscriber {
+    display: none;
+  }
+  section#main .infographics {
+    width: 80%;
+    padding: 0 20%;
+  }
+  section#main .infographics .top .image1 {
+    height: 15.8rem;
+  }
+}
+@media screen and (max-width: 811px) {
+  section#main .infographics .top {
+    flex-direction: column;
+  }
+  section#main .infographics .top .text-blocks {
+    align-items: center;
+    width: 100%;
+  }
+  section#main .infographics .top .text-blocks .block {
+    border-radius: 3rem;
+  }
+  section#main .infographics .top .text-blocks .block.bottom {
+    border-radius: 3rem;
+  }
+  section#main .infographics .top .text-blocks .dot.mobile {
+    display: flex;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    right: auto;
+  }
+  section#main .infographics .top .text-blocks .dot.desktop {
+    display: none;
+  }
+  section#main .infographics .top .image1 {
+    width: 100%;
+  }
 }
 
 button.button {
