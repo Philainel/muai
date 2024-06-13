@@ -3,6 +3,8 @@
   --side-text-color: #B3B3BA;
   --background-black-color: #1A1A1F;
   --background-darker-color: #07070C;
+  --cream-color: #FFFCFB;
+  --border-color: #F4F4F6;
 }
 
 body {
@@ -49,7 +51,6 @@ nav .buttons a {
 section#main {
   display: flex;
   flex-direction: row;
-  padding: 2% 8.5%;
   gap: 5rem;
 }
 section#main .intro {
@@ -111,6 +112,9 @@ section#main .intro .subscriber .input-field input::placeholder {
 }
 section#main .intro .subscriber .input-field input::-ms-input-placeholder {
   color: white;
+}
+section#main .intro .subscriber .input-field input button.button {
+  width: 5rem;
 }
 section#main .infographics {
   display: flex;
@@ -253,6 +257,143 @@ section#main .infographics .block > * {
   section#main .infographics .top .image1 {
     width: 100%;
   }
+}
+
+section#why .title {
+  width: 100%;
+  text-align: center;
+  font-weight: 500;
+  font-size: 3rem;
+}
+section#why .title .accent {
+  color: var(--accent-color);
+}
+section#why .grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 1rem;
+}
+section#why .grid .card {
+  border: 2px solid #F4F4F6;
+  border-radius: 40px;
+  padding: 1.5rem 1.2rem;
+}
+section#why .grid .card .name {
+  font-size: 1.6rem;
+  margin-bottom: 1.8rem;
+  font-weight: 500;
+}
+section#why .grid .card .opinion {
+  color: #B3B3BA;
+  font-size: 1.2rem;
+}
+@media screen and (max-width: 1199px) {
+  section#why .grid {
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (max-width: 811px) {
+  section#why .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+section#faq {
+  background-color: var(--cream-color);
+}
+section#faq .background {
+  background-color: white;
+  border: 2px solid var(--border-color);
+  border-radius: 4rem;
+  padding: 3rem;
+}
+section#faq .background .header {
+  background-color: var(--cream-color);
+  padding: 3rem 5rem;
+  border-radius: 4rem;
+  border: 2px solid var(--border-color);
+  margin-bottom: 1rem;
+}
+section#faq .background .header .title {
+  font-weight: 500;
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+  width: 100%;
+  text-align: center;
+}
+section#faq .background .header .tagline {
+  color: var(--side-text-color);
+  font-size: 1rem;
+  width: 100%;
+  text-align: center;
+}
+section#faq .background .grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 0.5rem;
+}
+section#faq .background .grid .tile {
+  background-color: white;
+  border: 2px solid var(--border-color);
+  border-radius: 30px;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 1rem;
+  text-align: center;
+}
+section#faq .background .bottom {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-radius: 40px;
+  margin-top: 1rem;
+  background-color: var(--accent-color);
+  padding: 3rem;
+  gap: 1rem;
+}
+section#faq .background .bottom .text {
+  color: white;
+}
+section#faq .background .bottom .text .up {
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+section#faq .background .bottom .text .down {
+  font-weight: 400;
+  font-size: 0.8rem;
+}
+section#faq .background .bottom .button {
+  width: auto;
+  border: 2px solid var(--border-color);
+  overflow: hidden;
+}
+@media screen and (max-width: 811px) {
+  section#faq .background {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  section#faq .background .header {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  section#faq .background .grid {
+    grid-template-columns: 1fr;
+  }
+  section#faq .background .bottom {
+    flex-direction: column;
+    justify-content: center;
+  }
+  section#faq .background .bottom .text {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+section {
+  padding: 2% 8.5%;
 }
 
 button.button {
